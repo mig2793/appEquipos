@@ -1,0 +1,50 @@
+/*Colors*/
+
+@colorOrange : #FF8B00;
+@colorButtonBlue : #216666;
+@colorButtonBlue2 : #2A496F;
+
+/*URL's*/
+
+@img : "../img/";
+@fonts : "../fonts/";
+
+/*Fonts*/
+
+@font-small : 12px;
+@font-medium : 15px;
+@font-big : 18px;
+
+@font-face {
+   font-family: apple;
+   font-style: normal;
+   font-weight: normal;
+   src: url("@{fonts}AppleGaramond-Bold.ttf");
+}
+
+@font-face {
+   font-family: appleLight;
+   font-style: normal;
+   font-weight: normal;
+   src: url("@{fonts}AppleGaramond-Light.ttf");
+}
+
+@font-face {
+   font-family: DKblue;
+   font-style: normal;
+   font-weight: normal;
+   src: url("@{fonts}DK Blue Sheep.otf");
+}
+
+/*Functions*/
+
+.border(@radio: 10px){
+	border-radius: @radio;
+	-webkit-border-radius: @radio;
+	-moz-border-radius: @radio;
+}
+
+.size(@width:100%,@heigth:100%){
+	width: @width;
+	height: @heigth
+}

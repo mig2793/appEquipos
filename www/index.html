@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app = 'escom'>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+        <link rel="stylesheet/less" type="text/css" href="styles.less" />
+        
+        <!--Libs
+        <link rel="stylesheet" type="text/css" href="assets/lib/jquery-mobile/jquery.mobile-1.4.5.min.css">
+        -->
+        <title>Solicitud Maquina</title>
+    </head>
+    <body >
+    
+        <div style="height: 100%;overflow:hidden;">
+            <div class="border-black" id="login">
+                <div></div>
+                <input type="text" placeholder="Usuario">
+                <input type="text" placeholder="Contraseña">
+                <button>Ingresar</button>
+                <button>Registrate</button>
+            </div>
+        </div>
+
+        <!--Libs-->
+        <script src="assets/lib/jquery/dist/jquery.min.js"></script>
+
+        <script src="assets/lib/angular/angular.min.js"></script>
+        <script src="assets/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="assets/lib/angular-modal-service/dst/angular-modal-service.min.js"></script>
+        
+        <!--Route-->
+        <script src="app/app.module.js"></script>
+        <script src="app/app.route.js"></script>
+
+        <!--Factorys and directive-->
+        <script src="assets/js/globals.js"></script>
+        <script src="assets/js/directive.js"></script>
+
+    </body>
+</html>
