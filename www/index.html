@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
         <link rel="stylesheet/less" type="text/css" href="styles.less" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         
         <!--Libs
         <link rel="stylesheet" type="text/css" href="assets/lib/jquery-mobile/jquery.mobile-1.4.5.min.css">
@@ -17,15 +18,23 @@
     </head>
     <body >
     
-        <div style="height: 100%;overflow:hidden;">
-            <div class="border-black" id="login">
-                <div></div>
-                <input type="text" placeholder="Usuario">
-                <input type="text" placeholder="Contraseña">
-                <button>Ingresar</button>
-                <button>Registrate</button>
-            </div>
-        </div>
+        <div class="margins" style="height: 100%;overflow:hidden;">
+<div id="pop-machineError" class="pop-up-behind">
+    <div class="pop-behind-form"></div>
+    <div class="pop-up">
+        <header>
+            <div class="button-close fa fa-times-circle fa-6" aria-hidden="true"></div>
+        </header>
+        <section>
+            <br>
+                <div class="alertIcon"></div>
+                <br>
+                <span>La máquina ya se encuentra reservada en la hora y fecha solicitada.<br>
+                Por favor selecciona otra fecha u hora.</span>
+         </section>
+    </div>
+</div>
+         </div>
 
         <!--Libs-->
         <script src="assets/lib/jquery/dist/jquery.min.js"></script>

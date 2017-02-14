@@ -1,12 +1,13 @@
 /*Colors*/
 
-@colorOrange : #FF8B00;
-@colorButtonBlue : #216666;
-@colorButtonBlue2 : #2A496F;
+@colorOrange : #fcc93d;
+@colorButton1 : #fc0;
+@colorButton2 : #f9f929;
+@colorGreen : #009900;
 
 /*URL's*/
 
-@img : "../img/";
+@imag : "../img/";
 @fonts : "../fonts/";
 
 /*Fonts*/
@@ -14,6 +15,7 @@
 @font-small : 12px;
 @font-medium : 15px;
 @font-big : 18px;
+@font-extra-big : 21px;
 
 @font-face {
    font-family: apple;
@@ -47,4 +49,13 @@
 .size(@width:100%,@heigth:100%){
 	width: @width;
 	height: @heigth
+}
+
+.image(@image,@width:100%,@height:100%,@postionx:center,@positiony:center){
+   background-image: url("@{image}");
+   width: 100%;
+   height: @height;
+   background-position: @postionx @positiony;
+   background-repeat: no-repeat;
+   background-size: @width @height;
 }
