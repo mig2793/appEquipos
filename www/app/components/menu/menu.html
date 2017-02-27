@@ -1,11 +1,21 @@
 <div id="menu" style="text-align:center">
-    <h4>Bienvenido Miguel Angel</h4>
-    <hr>
-    <ul>
-        <li>Solicitudes</li>
-        <li>Pedir equipo</li>
-        <li>Novedades</li>
-    </ul>
+	<div id="menu-content">
+	    <ul>
+	        <li><a href="" ui-sref="menu.home">Solicitudes</a></li>
+	        <li><a href="" ui-sref="menu.requestMachine">Pedir equipo</a></li>
+	        <li><a href="" ui-sref="menu.news">Novedades</a></li>
+	    </ul>
+    </div>
+    <div id="name-user">
+    	<div class="table">
+	    	<div class="tabletd">
+	    		<i class="fa fa-user small-m" aria-hidden="true"></i><span>   Miguel Angel Gonzalez</span>
+	    	</div>
+	    	<div class="tabletd" style="text-align:right" ng-click="closeSession();">
+	    		<span style="text-align:rigth">Salir&nbsp;</span><i class="fa fa-user-times" aria-hidden="true">&nbsp;</i>
+	    	</div>
+	    </div>
+    </div>
 </div>
 <div id="content-menu" ui-view style="height: 100%">
 

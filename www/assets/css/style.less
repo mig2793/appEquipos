@@ -3,14 +3,22 @@
 /*Globals*/
 
 body{
-	background-color: @colorOrange;
+background: rgba(255,175,75,1);
+background: -moz-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)));
+background: -webkit-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+background: -o-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+background: -ms-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+background: linear-gradient(to right, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
+
 	font-family: DKblue;
 	font-size: @font-medium;
 	.size();
 }
 
 button{
-	.size(60%,45px);
+	.size(60%,40px);
 	.border(20px);
 	margin-bottom: 8px !important;
 	border:2px solid black;
@@ -24,6 +32,15 @@ button{
 	padding: 3px;
 	border: 1.5px solid black;
 	background-color: white;
+}
+
+input[type="checkbox"]{
+	.size(20px,20px);
+}
+
+a{
+	text-decoration: none;
+	color: white;
 }
 
 input[type="time"]{
@@ -62,6 +79,7 @@ hr{
 .font-medium {font-size : 15px;}
 .font-big {font-size : 18px;} 
 .font-big-extra {font-size : 21px;} 
+.small-m{font-size: 1.5em !important}
 
 
 .button1{
@@ -107,6 +125,14 @@ hr{
 	.border(20px);
 }*/
 
+#content-input-login{
+	position: relative;
+	.size(95%,auto);
+	margin: 0 auto;
+}
+
+/*****************************************/
+
 #profile-img{
 	.image("@{imag}/user.png",110px,110px,center,center);
 	margin-bottom: 70px;
@@ -146,11 +172,12 @@ hr{
 /*home*/
 
 .box-request{
-	.size(85%,auto);
+	.size(85%, auto);
 	background-color: #3e3e3e;
-	padding: 15px;
+	padding: 5px 10px 5px 10px;
 	color:white;
 	.border(10px);
+	margin-top: 5px;
 }
 /******************************************/
 
@@ -195,7 +222,50 @@ li{
 	padding: 5px;
 	display: inline-block;
 	text-decoration: none;
-	font-family: appleLight;
+	font-family: apple;
+	margin-left: -6px;
+	border: 0px solid #3e3e3e;
+	text-shadow:2px 2px 2px black;
+}
+
+ul li:first-child { 
+  border-radius: 5px 0px 0px 5px;
+  border-right: none;
+  background-color: #1e496f;
+}
+
+ul li:last-child{
+	border-radius: 0px 5px 5px 0px;
+	border-left: none;
+}
+
+#name-user{
+	margin-top: 35px;
+	padding: 6px 0px 6px 5px;
+	background-color: #757575;
+	color: white;
+	text-align: left;
+}
+
+#menu-content{
+
+background: rgba(38,124,204,1);
+background: -moz-linear-gradient(45deg, rgba(38,124,204,1) 0%, rgba(2,85,173,1) 100%);
+background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(38,124,204,1)), color-stop(100%, rgba(2,85,173,1)));
+background: -webkit-linear-gradient(45deg, rgba(38,124,204,1) 0%, rgba(2,85,173,1) 100%);
+background: -o-linear-gradient(45deg, rgba(38,124,204,1) 0%, rgba(2,85,173,1) 100%);
+background: -ms-linear-gradient(45deg, rgba(38,124,204,1) 0%, rgba(2,85,173,1) 100%);
+background: linear-gradient(45deg, rgba(38,124,204,1) 0%, rgba(2,85,173,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267ccc', endColorstr='#0255ad', GradientType=1 );
+	.size(100%,auto);
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin-bottom: 5px;
+	font-size: 15px;
+	padding: 5px 0px 5px 0px;
+	z-index: 2000;
+	font-size: 14px;
 }
 
 /*******************************************/

@@ -1,4 +1,4 @@
- var escom = angular.module('escom', ['ui.router', 'angularModalService', 'angular.less']);
+var appescom = angular.module("escommovil", ['ui.router', 'angularModalService', 'angular.less']);
 
 /*setTimeout(function(){
 	try{

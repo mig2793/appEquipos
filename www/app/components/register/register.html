@@ -1,19 +1,27 @@
-<div>
+<div class="margins">
     <div id="content-register"  class="center-content">
         <h1>Regístrate</h1>
         <div></div>
         <input type="text" placeholder="Nombres">
         <input type="text" placeholder="Apellidos">
+        <input type="text" placeholder="Cédula">
         <select id="grade">
             <option selected disabled>Grado</option>
         </select>
         <select id="rol">
             <option selected disabled>Rol</option>
         </select>
+        <select id="study-grade">
+            <option selected disabled>Tipo de estudio</option>
+            <option value="1">Tecnologia</option>
+            <option value="2">Ingenieria</option>
+            <option value="3">Postgrado</option>
+        </select>
         <input type="text" placeholder="Usuario">
         <input type="password" placeholder="Contraseña">
         <input type="password" placeholder="Repita la contraseña">
+        <input type="checkbox" id="check-terms"><label for="check-terms">Acepto términos y condiciones de uso</label>
         <button class="button1">Registrar</button>
-        <button class="button2">Volver</button>
+        <button class="button2" ng-click="back();">Volver</button>
     </div>
 </div>
