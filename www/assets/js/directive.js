@@ -29,7 +29,7 @@ appescom.directive('popUp', function(){
 			element.css("top", position_popUp + "px");
 		});
 
-		var $button = element.find(".button-close");
+		var $button = element.find(".button-close, .button-close2");
 
 		$button.click(function(){
 			element.parent().remove();

@@ -9,14 +9,17 @@
     <div id="name-user">
     	<div class="table">
 	    	<div class="tabletd">
-	    		<i class="fa fa-user small-m" aria-hidden="true"></i><span>   Miguel Angel Gonzalez</span>
+	    		<i class="fa fa-user small-m" aria-hidden="true"></i><span>   {{dataUser.nombre}} </span>
 	    	</div>
-	    	<div class="tabletd" style="text-align:right" ng-click="closeSession();">
-	    		<span style="text-align:rigth">Salir&nbsp;</span><i class="fa fa-user-times" aria-hidden="true">&nbsp;</i>
+	    	<div class="tabletd" style="text-align:right">
+	    		<span style="text-align:rigth" ng-click="closeSession();" >Salir&nbsp;</span><i class="fa fa-user-times" aria-hidden="true" ng-click="closeSession();">&nbsp;</i>
 	    	</div>
 	    </div>
     </div>
 </div>
 <div id="content-menu" ui-view style="height: 100%">
-
+    <div class="load">
+        <div class="img-load"></div>
+    </div>
+    <div class="Wall"></div>
 </div>

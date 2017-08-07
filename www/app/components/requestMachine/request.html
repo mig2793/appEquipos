@@ -1,31 +1,32 @@
 <br>
 <div id="request-machine" class="margins">
-    <select>
-        <option selected disabled>Maquina a utilizar</option>
+    <select id="machine" ng-model="data.idequipo" ng-change="changesupplies();">
+        <option selected disabled>Máquina a utilizar</option>
+        <option ng-repeat = "data in machines" id="{{data.id_Equipos}}" value="{{data.Serial}}">{{data.Serial}}-{{data.Equipo}}</option>
     </select>
-    <select>
+    <select id="insum" ng-model="data.changesupplie" ng-change="addSupplie();">
         <option selected disabled>Insumos a utilizar</option>
+        <option ng-repeat = "supplies in insumos" id="{{supplies.Id_insumo}}">{{supplies.insumo}}</option>
     </select>
     <span>Fecha solicitud Máquina</span>
-    <input type="date" placeholder="Fecha">
+    <input type="date" ng-model="data.fecha" placeholder="Fecha">
     <div class="table">
         <div class="tabletd">
             <span>Hora inicio</span>
-            <input type="time">
+            <input ng-model="data.horaInicio" type="time">
         </div>
         <div class="tabletd">
             <span>Hora fin</span>
-            <input type="time">
+            <input ng-model="data.horaFin" type="time">
         </div>
     </div>
-    <textarea placeholder="Detalle de actividad a realizar"></textarea>
+    <textarea ng-model="data.detalleActividad" placeholder="Detalle de actividad a realizar"></textarea>
     <br>
     <span>Insumos a utilizar</span>
     <div id="box-insumos">
-        <div class="insumos"><span>Insumo 1</span><em>&nbsp&nbspx</em></div>
-        <div class="insumos"><span>Insumo 2</span><em>&nbsp&nbspx</em></div>
+        <div class="insumos" ng-repeat = "suppli in supplies" id="{{suppli.Id_insumo}}"><span>{{suppli.insumo}}</span><em ng-click = "removeitem($event);">&nbsp&nbspx</em></div>
     </div>
     <div style="text-align:center">
-        <button class="button1">Solicitar</button>
+        <button class="button1" ng-click="request(data);">Solicitar</button>
     </div>
 </div>
