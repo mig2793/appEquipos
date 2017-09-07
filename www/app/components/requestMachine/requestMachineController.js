@@ -27,8 +27,13 @@ function($scope,$state,requestService,Modal,globals) {
 	   	data = {};
       	requestService.servicesRequest(data,url).then(function(promise){
             var result = promise.data;
-            if(result.state == 0)
-		          alert(result.response);
+            if(result.state == 0){
+              globals.set(result.response);
+              Modal.showModal({
+                templateUrl : 'app/components/pop-ups/popGlobal/popUpMessage.html',
+                controller : 'globalPopController'
+              }) 
+            } 
             else
               $scope.insumos = result.response;
       	})

@@ -2,7 +2,7 @@
 <div id="request-machine" class="margins">
     <select id="machine" ng-model="data.idequipo" ng-change="changesupplies();">
         <option selected disabled>Máquina a utilizar</option>
-        <option ng-repeat = "data in machines" id="{{data.id_Equipos}}" value="{{data.Serial}}">{{data.Serial}}-{{data.Equipo}}</option>
+        <option ng-repeat = "data in machines" id="{{data.id_Equipos}}" value="{{data.Serial}}" ng-if="data.Estado == 'Disponible'">{{data.Serial}}-{{data.Equipo}}</option>
     </select>
     <select id="insum" ng-model="data.changesupplie" ng-change="addSupplie();">
         <option selected disabled>Insumos a utilizar</option>

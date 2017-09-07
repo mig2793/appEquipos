@@ -12,11 +12,11 @@ function($scope,$state,homeService,globals,Modal) {
 			$scope.requests = promise.data.response;
 			if($scope.requests != 'No se encontraron datos'){
 				for(var i=0;i<$scope.requests.length;i++){
-					if($scope.requests[i].estado_solicitud == 1)
+					if($scope.requests[i].estado_solicitud == 1 && $scope.requests[i].days >= -3)
 						$scope.validateR = true
-					if($scope.requests[i].estado_solicitud == 2)
+					if($scope.requests[i].estado_solicitud == 2 && $scope.requests[i].days >= -3)
 						$scope.validateW = true
-					if($scope.requests[i].estado_solicitud == 3)
+					if($scope.requests[i].estado_solicitud == 3 && $scope.requests[i].days >= -3)
 						$scope.validateC = true
 				}
 			}else{
