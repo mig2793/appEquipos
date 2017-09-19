@@ -1,0 +1,35 @@
+<div class="margins">
+    <br>
+    <div id="content-home">
+        <span class="font-big">Tus solicitudes&nbsp;&nbsp;</span><i class="fa fa-clock-o" aria-hidden="true"></i>
+        <br>
+        <div class="box-request" id="solicitud-{{request.Id_solicitud}}" ng-repeat = "request in requests" ng-if="request.estado_solicitud === 1 && request.days >= -3">
+            <span class="font-big">{{request.Equipo}}</span><br>
+            <span class="font-small">Fecha: {{request.Fecha}} {{request.Hora_inicio}} - {{request.Hora_final}}</span>
+            <div class="delete-button" ng-click="deleteRequest(request.Id_solicitud);"><i class="fa fa-trash" aria-hidden="true"></i></div>
+        </div>
+        <div class="noExist" ng-if="validateR == false">
+            No has realizado ninguna solicitud recientemente.
+        </div>
+        <br>
+        <span class="font-big">Aprobadas&nbsp;&nbsp;</span><i class="fa fa-check" aria-hidden="true"></i>
+        <br>
+        <div class="box-request" ng-repeat = "request in requests" ng-if="request.estado_solicitud === 2 && request.days >= -3">
+            <span class="font-big">{{request.Equipo}}</span><br>
+            <span class="font-small">Fecha: {{request.Fecha}} {{request.Hora_inicio}} - {{request.Hora_final}}</span>
+        </div>
+        <div class="noExist" ng-if="validateW == false">
+            No tienes solicitudes aprobadas recientemente.
+        </div>
+        <br>
+        <span class="font-big">Rechazadas&nbsp;&nbsp;</span><i class="fa fa-times" aria-hidden="true"></i>
+        <br>
+        <div class="box-request" ng-repeat = "request in requests" ng-if="request.estado_solicitud === 3 && request.days >= -3">
+            <span class="font-big">{{request.Equipo}}</span><br>
+            <span class="font-small">Fecha: {{request.Fecha}} {{request.Hora_inicio}} - {{request.Hora_final}}</span>
+        </div>
+        <div class="noExist" ng-if="validateC == false">
+            No tienes solicitudes rechazadas recientemente.
+        </div>
+    </div>
+</div>
