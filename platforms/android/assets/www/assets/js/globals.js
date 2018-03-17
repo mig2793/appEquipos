@@ -8,6 +8,11 @@ if(userAgent.match( /Android/i ))
 
 window.urlImages = "http://app.mincivil.net:90/public/uploads/images/";
 
+
+//window.urlService = 'http://127.0.0.1:8000/';
+
+//window.urlImages = "http://127.0.0.1:8000/uploads/images/";
+
 var width=$("#menu").width();
 var width_display = $(window).width();
 var height_display = $(window).height();

@@ -7,7 +7,7 @@ function($scope,$state,RegisterService,Modal,globals) {
 
 		if(data != undefined)
 		{
-			if(data.hasOwnProperty("checked") && data.hasOwnProperty("lastname") 					&&
+			if(data.hasOwnProperty("lastname") 					&&
 				data.hasOwnProperty("name") && data.hasOwnProperty("nit") 							&&
 				data.hasOwnProperty("password") && $("#range option:selected").text() != "Rango" 	&&
 				$("#study-grade option:selected").text() != "Tipo de estudio"  &&
@@ -19,6 +19,7 @@ function($scope,$state,RegisterService,Modal,globals) {
 					data["rol"] = 1;
 					data["range"] = $("#range option:selected").val();
 					data["id_pregunta"] = $("#answer option:selected").val();
+					data["estado"] = 1;
 					RegisterService.servicesLogin(data,url).then(function(promise){
 			            var result = promise.data;
 			            console.log(result);
@@ -27,7 +28,13 @@ function($scope,$state,RegisterService,Modal,globals) {
 			            	var datals = result.data[0];
 							datals = JSON.stringify(datals)
 							localStorage.setItem("user",datals);
-			            	$state.go('menu.home');
+			            	$state.go('login');
+			            	
+				            globals.set("De 24 a 48 horas se activará tu cuenta. En caso contrario, comuniquese con un administrador del sistema");
+				            Modal.showModal({
+				              templateUrl : 'app/components/pop-ups/popGlobal/popUpMessage.html',
+				              controller : 'globalPopController'
+				            })			            	
 			            }else{
 				            globals.set(result.message);
 				            Modal.showModal({
